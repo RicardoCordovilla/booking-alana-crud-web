@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+
+
+.App, .root {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+  width: 100vw;
+  /* overflow: hidden; */
+}
+
+.homeHeader {
+  position: fixed;
+  top: 1em;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  z-index: 2;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnNewBooking {
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease-in-out;
+  height: fit-content;
+  font-weight: 400;
+  border: none;
+  background: #555A88;
+  color: #ffffff;
+  padding: 10px 18px 10px 37px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.bx,.icon {
+  font-size: 1.6rem;
+}
+
+
+.formHide {
+  position: relative;
+  transform: scale(0);
+  transition: transform 300ms ease-out;
+}
+
+
+
+.formContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(80, 100, 255, 0.3);
+  transition: transform 300ms ease-in;
+  overflow-y:scroll;
+  padding: 5em 0;
+}
+
+
+form {
+  position: relative;
+  top: 6rem;
+  width: 419px;
+  background: #eeeeff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+  text-align: left;
+  padding: 1.5em;
+  padding-top: 2em;
+  border: 1px solid #aaa;
+  transform: scale(0.8);
+  margin-bottom: 5vh;
+  margin-top: 20em;
+}
+
+.form__closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #212121;
+  transition: transform 400ms ease;
+}
+
+.form__closeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  color: #f74422;
+  transition: transform 250ms ease;
+}
+
+
+.form__closeBtn i {
+  font-size: 1.5rem;
+}
+
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field>label {
+  line-height: 19px;
+  color: #000000;
+}
+
+.field>input,
+.field>select {
+  width: 100%;
+  background-color: #dfdfef;
+  border: 1px solid #C3C1C1;
+  border-radius: 6px;
+  padding: 11px 20px;
+}
+
+.field>input:focus,
+.field>select:focus {
+  background: #fff;
+}
+
+.field>input ::placeholder {
+  color: #BDBDBD;
+}
+
+form>button {
+  border: none;
+  width: 100%;
+  background: #555A88;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+form>button:hover {
+  box-shadow: 0 0 7px 3px rgba(133, 133, 133, 0.8);
+  transition: box-shadow 0.2s ease;
+}
+
+
+
+.optioncontainer {
+  margin-top: -0.5rem;
+  width: 100%;
+  /* background: #275EFE; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding-bottom: 1rem;
+}
+
+
+/* MAIN */
+/* =============================================== */
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: rgba(64, 19, 19, 0.4);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+
+  background: #2c3696;
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: #bbb;
+  transform: scale(1.1);
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  /* font-size: 18px; */
+  font-weight: 600;
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 40%);
+  color: rgba(29, 24, 24, 0.718);
+}
+
+
+/* ABS */
+/* ====================================================== */
+.abs-site-link {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .5);
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+.cardsZoneContainer {
+  position: absolute;
+  top: 5em;
+  left: 1em;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+  overflow-x: scroll;
+  /* justify-content: stretch; */
+  padding-left: 1em;
+}
+
+
+.cardZone {
+  position: relative;
+  width: 90vw;
+  max-width: 350px;
+  height: 70vh;
+  background: #aaa;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  transition: box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  padding: 0 1em;
+  padding-bottom: 1em;
+
+}
+
+.cardZone h2 {
+
+  padding: 1em;
+}
+
+
+.circo{
+  background-color: blue;
+  /* color: #fff; */
+}
+.mono{
+  background-color: rgb(78, 21, 41);
+  /* color: #fff; */
+}
+.troncos{
+  background-color: brown;
+}
+.tarabita{
+  background-color: green;
+}
+.alana{
+  background-color: cyan;
+}
+.otra{
+  background-color: gray;
+}
+
+
+
+.brunch{
+  background-color: coral;
+}
+
+.almuerzo{
+  background-color: darkgreen;
+}
+
+.fiesta{
+  background-color: yellowgreen;
+}
+.general{
+  background-color: gray;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 1.2em;
+  transition: transform 0.4s ease;
+}
+
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+
+.cardInfo{
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.4rem; */
+}
+
+.cardInfo > div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px dashed #bbb;
+  padding: 0.5rem 0;
+}
+
+.cardInfo :nth-child(1){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.card_header{
+  border: none;
+}
+
+.userName{
+  font-size: 0.1rem;
+  color: #aaa;
+  transform: scale(0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kidad{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.kidad_child{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
