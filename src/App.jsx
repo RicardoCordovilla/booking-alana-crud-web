@@ -39,7 +39,7 @@ function App() {
         </figure>
         <div className="">
           {/* <label htmlFor="date">Fecha</label> */}
-          <input name='filterdate' type="date" id='date'
+          <input name='filterdate' type="date" id='date' defaultValue={nowDate}
             onChange={e => { setDatefilter(e.target.value) }}
           />
         </div>
