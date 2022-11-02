@@ -25,7 +25,7 @@ const CardZone = ({ zoneName, date }) => {
 
     return (
         <div className={`cardZone ${zoneName}`}>
-            <h2 className=''>ZONA {zoneName.toUpperCase()}</h2>
+            {/* <h2 className=''>ZONA {zoneName.toUpperCase()}</h2> */}
             {
                 zoneInfo
                     ?.sort((a, b) => a.category - b.category)

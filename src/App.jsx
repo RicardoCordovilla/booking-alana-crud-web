@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <header className='homeHeader'>
         <figure className="logoBx">
-          <img src="./logoalana.jfif" alt="" className='logoImg'/>
+          <img src="./logoalana.jfif" alt="" className='logoImg' />
         </figure>
         <div className="">
           {/* <label htmlFor="date">Fecha</label> */}
@@ -62,13 +62,34 @@ function App() {
       </div>
 
       <div className="cardsZoneContainer">
-        <CardZone zoneName={'circo'} date={datefilter} />
-        <CardZone zoneName={'dino'} date={datefilter} />
-        <CardZone zoneName={'mono'} date={datefilter} />
-        <CardZone zoneName={'troncos'} date={datefilter} />
-        <CardZone zoneName={'tarabita'} date={datefilter} />
-        <CardZone zoneName={'alana park'} date={datefilter} />
-        <CardZone zoneName={'otra'} date={datefilter} />
+        <div className="">
+          <h2>CIRCO</h2>
+          <CardZone zoneName={'circo'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>DINO</h2>
+          <CardZone zoneName={'dino'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>MONO</h2>
+          <CardZone zoneName={'mono'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>TRONCOS</h2>
+          <CardZone zoneName={'troncos'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>TARABITA</h2>
+          <CardZone zoneName={'tarabita'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>ALANA PARK</h2>
+          <CardZone zoneName={'alana park'} date={datefilter} />
+        </div>
+        <div className="">
+          <h2>OTRA</h2>
+          <CardZone zoneName={'otra'} date={datefilter} />
+        </div>
 
       </div>
 

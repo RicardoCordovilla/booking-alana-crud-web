@@ -303,8 +303,7 @@ form>button:hover {
   gap: 0.6rem;
   flex-wrap: nowrap;
   overflow-y: scroll;
-  padding: 0 1em;
-  padding-bottom: 1em;
+  padding: 1em;
 
 }
 
@@ -318,8 +317,13 @@ form>button:hover {
   background-color: blue;
   /* color: #fff; */
 }
+.dino{
+  background-color: rgb(38, 17, 49);
+  /* color: #fff; */
+}
+
 .mono{
-  background-color: rgb(78, 21, 41);
+  background-color: rgb(49, 21, 31);
   /* color: #fff; */
 }
 .troncos{
