@@ -34,6 +34,9 @@ function App() {
   return (
     <div className="App">
       <header className='homeHeader'>
+        <figure className="logoBx">
+          <img src="./logoalana.jfif" alt="" className='logoImg'/>
+        </figure>
         <div className="">
           {/* <label htmlFor="date">Fecha</label> */}
           <input name='filterdate' type="date" id='date'
@@ -43,7 +46,7 @@ function App() {
 
         <button className='btnNewBooking' onClick={openNewForm}>
           <i className='bx bx-plus'></i>
-          NUEVA RESERVA
+          NUEVA
         </button>
       </header>
 

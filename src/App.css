@@ -35,6 +35,16 @@
   align-items: center;
 }
 
+.logoBx{
+  width: 40px;
+  height: auto;
+}
+
+.logoImg{
+  width: 100%;
+  height: auto;
+}
+
 .btnNewBooking {
   position: relative;
   cursor: pointer;
@@ -44,7 +54,7 @@
   border: none;
   background: #555A88;
   color: #ffffff;
-  padding: 10px 18px 10px 37px;
+  padding: 0.4rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.5em;
