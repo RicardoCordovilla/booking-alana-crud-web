@@ -27,6 +27,7 @@ const CardBooking = ({ bookinInfo }) => {
 
                 </section>
                 <div><b>Nombre: </b>{bookinInfo.completename}</div>
+                <div><b>Cel: </b>{bookinInfo.phone}</div>
                 <div><b>Categoria: </b>{categoryName}</div>
                 <div className="kidad">
                     <div className='kidad_child'><i className='bx bx-male-female'></i>{bookinInfo.adults}</div>

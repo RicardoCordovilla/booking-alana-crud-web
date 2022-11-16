@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CardBooking from './CardBooking'
 
-const CardZone = ({ zoneName, date }) => {
+const CardZone = ({ zoneName, date, activeGet }) => {
 
     const [zoneInfo, setZoneInfo] = useState()
 
@@ -20,7 +20,7 @@ const CardZone = ({ zoneName, date }) => {
 
     useEffect(() => {
         getZoneInfo()
-    }, [date])
+    }, [date, activeGet])
 
 
     return (

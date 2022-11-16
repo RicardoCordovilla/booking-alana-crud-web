@@ -24,7 +24,7 @@ const resetValues = {
 
 }
 
-function BookingForm({closeForm,setDatefilter}) {
+function BookingForm({closeForm, setDatefilter, setActiveGet}) {
 
   const { register, handleSubmit, reset } = useForm()
 
@@ -36,6 +36,7 @@ function BookingForm({closeForm,setDatefilter}) {
     axios.post(urlBooking, data, headers)
       .then(res => { 
         console.log(res.data) 
+        setActiveGet(cv => cv + 1)
         reset()
       })
       .catch(err => console.log(err))

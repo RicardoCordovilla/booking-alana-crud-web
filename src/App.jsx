@@ -14,6 +14,7 @@ function App() {
   const [formOpen, setFormOpen] = useState(false)
 
   const [datefilter, setDatefilter] = useState(nowDate)
+  const [activeGet, setActiveGet] = useState(0)
 
   const openForm = () => setFormOpen(true)
   const openNewForm = () => {
@@ -58,37 +59,38 @@ function App() {
           // updateInfo={updateInfo}
           closeForm={closeForm}
           setDatefilter={setDatefilter}
+          setActiveGet={setActiveGet}
         />
       </div>
 
       <div className="cardsZoneContainer">
         <div className="">
           <h2>CIRCO</h2>
-          <CardZone zoneName={'circo'} date={datefilter} />
+          <CardZone zoneName={'circo'} date={datefilter} activeGet={activeGet} />
         </div>
         <div className="">
           <h2>DINO</h2>
-          <CardZone zoneName={'dino'} date={datefilter} />
+          <CardZone zoneName={'dino'} date={datefilter}  activeGet={activeGet}/>
         </div>
         <div className="">
           <h2>MONO</h2>
-          <CardZone zoneName={'mono'} date={datefilter} />
+          <CardZone zoneName={'mono'} date={datefilter}  activeGet={activeGet}/>
         </div>
         <div className="">
           <h2>TRONCOS</h2>
-          <CardZone zoneName={'troncos'} date={datefilter} />
+          <CardZone zoneName={'troncos'} date={datefilter}  activeGet={activeGet}/>
         </div>
         <div className="">
           <h2>TARABITA</h2>
-          <CardZone zoneName={'tarabita'} date={datefilter} />
+          <CardZone zoneName={'tarabita'} date={datefilter}  activeGet={activeGet}/>
         </div>
         <div className="">
           <h2>ALANA PARK</h2>
-          <CardZone zoneName={'alana park'} date={datefilter} />
+          <CardZone zoneName={'alana park'} date={datefilter}  activeGet={activeGet}/>
         </div>
         <div className="">
           <h2>OTRA</h2>
-          <CardZone zoneName={'otra'} date={datefilter} />
+          <CardZone zoneName={'otra'} date={datefilter}  activeGet={activeGet}/>
         </div>
 
       </div>
